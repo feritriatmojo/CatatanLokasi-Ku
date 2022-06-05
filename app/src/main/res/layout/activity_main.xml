@@ -105,12 +105,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints" />
 
+    <!--TODO 9 : Menampilkan tombol untuk tulis/menyimpan file yang telah diberi nama  -->
+
     <EditText
         android:id="@+id/editTeksCatatan"
         android:layout_width="377dp"
         android:layout_height="108dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/white"
         android:ems="10"
@@ -123,20 +125,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editFileName" />
 
-    <!--TODO 9 : Menampilkan tombol untuk tulis/menyimpan file yang telah diberi nama  -->
     <Button
         android:id="@+id/bagikan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:background="#171717"
         android:text="Bagikan"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/btnRead"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTeksCatatan"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnWrite"

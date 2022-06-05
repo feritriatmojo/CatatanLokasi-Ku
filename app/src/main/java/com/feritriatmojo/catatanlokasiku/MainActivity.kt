@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         binding.logtofile.setOnClickListener {
             var logDataSensor = binding.editTeksCatatan.text.toString()
             val timeStamp: String = SimpleDateFormat("yy-MM-dd").format(Date())
-            binding.editFileName.setText("lokasiKU" + timeStamp + ".txt")
+            binding.editFileName.setText("lokasiKU :" + timeStamp + ".txt")
             val logData1 = binding.textView.text.toString()
             val logData2 = binding.textView.text.toString()
             logDataSensor = "$logDataSensor$logData1 , $logData2\n"
@@ -195,7 +195,6 @@ class MainActivity : AppCompatActivity() {
                     val address = geocoder.getFromLocation(location.latitude, location.longitude, 1)
                     val address_line = address[0].getAddressLine(0)
                     hasildata.text = "" + address_line +
-
                         "Latitude  : " + location.latitude + " ,Longitude : " + location.longitude
                     val address_location = address[0].getAddressLine(0)
                     openLocation(address_location.toString())
