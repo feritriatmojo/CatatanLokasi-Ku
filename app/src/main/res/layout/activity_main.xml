@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--TODO 1 : Menampilkan gambar lokasi pada aplikasi-->
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="445dp"
+        app:layout_constraintBottom_toTopOf="@+id/editFileName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/lokasi" />
+
+    <!--TODO 2 : Menampilkan teks "Current GPS Location" pada aplikasi-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:text="Current GPS Location"
+        android:textColor="#0E0E0E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logtofile"
+        tools:ignore="MissingConstraints" />
+
+    <!--TODO 3 : Menampilkan teks "Catatan Lokasi" pada aplikasi-->
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Catatan Lokasi"
+        android:textAllCaps="true"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--TODO 4 : Menampilkan tombol untuk Mendapatkan lokasi terkini-->
+    <Button
+        android:id="@+id/btngetgps"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/text"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="4dp"
+        android:background="@color/black"
+        android:text="Dapatkan Lokasi Terkini"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        tools:ignore="MissingConstraints" />
+
+    <!--TODO 5 : Menampilkan tombol untuk log to file -->
+    <Button
+        android:id="@+id/logtofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/biru"
+        android:text="Log to file"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btngetgps"
+        tools:ignore="MissingConstraints" />
+
+    <!--TODO 6 : Menampilkan edit teks untuk mengisikan nama file yang akan disimpan -->
+
+    <!--TODO 7 : Menampilkan edit teks untuk mengisikan isi dari file tersebut-->
+
+    <!--TODO 8 : Menampilkan tombol untuk membagikan isi data -->
+
+    <EditText
+        android:id="@+id/editFileName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Isikan nama file"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTeksCatatan"
+        android:layout_width="377dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Isikan catatan di sini"
+        android:inputType="textLongMessage|textMultiLine"
+        android:lines="7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFileName" />
+
+    <!--TODO 9 : Menampilkan tombol untuk tulis/menyimpan file yang telah diberi nama  -->
+    <Button
+        android:id="@+id/bagikan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#171717"
+        android:text="Bagikan"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/btnRead"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTeksCatatan"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnWrite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/hijau"
+        android:text="Tulis"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnRead"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--TODO 10 : Menampilkan tombol untuk baca/membuka isi file yang telah disimpan sebelumnya-->
+    <Button
+        android:id="@+id/btnRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/orange"
+        android:text="Baca"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnWrite"
+        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnWrite" />
+
+    <!--TODO 11 : Menampilkan tombol hapus untuk menghapus file yang telah disimpan sebelumnya-->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/merah"
+        android:text="Hapus"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnRead"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnRead" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
