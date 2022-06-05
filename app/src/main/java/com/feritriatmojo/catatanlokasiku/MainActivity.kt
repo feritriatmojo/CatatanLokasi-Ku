@@ -201,7 +201,6 @@ class MainActivity : AppCompatActivity() {
                 } catch (e: IOException) {
 
                 }
-
             }
         }
     }
